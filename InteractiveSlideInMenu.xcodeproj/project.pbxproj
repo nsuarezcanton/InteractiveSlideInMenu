@@ -9,19 +9,25 @@
 /* Begin PBXBuildFile section */
 		038F26E61F66F18C00CADDA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038F26E51F66F18C00CADDA9 /* AppDelegate.swift */; };
 		038F26E81F66F18C00CADDA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038F26E71F66F18C00CADDA9 /* ViewController.swift */; };
-		038F26EB1F66F18C00CADDA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 038F26E91F66F18C00CADDA9 /* Main.storyboard */; };
 		038F26ED1F66F18C00CADDA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 038F26EC1F66F18C00CADDA9 /* Assets.xcassets */; };
 		038F26F01F66F18C00CADDA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 038F26EE1F66F18C00CADDA9 /* LaunchScreen.storyboard */; };
+		038F26FC1F66F4A800CADDA9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038F26FB1F66F4A800CADDA9 /* MenuViewController.swift */; };
+		038F27061F683BE600CADDA9 /* SlideInPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038F27051F683BE600CADDA9 /* SlideInPresentationManager.swift */; };
+		038F27081F683F4100CADDA9 /* SlideInPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038F27071F683F4100CADDA9 /* SlideInPresentationController.swift */; };
+		038F270A1F6842EA00CADDA9 /* SlideInPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038F27091F6842EA00CADDA9 /* SlideInPresentationAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		038F26E21F66F18C00CADDA9 /* InteractiveSlideInMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InteractiveSlideInMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		038F26E51F66F18C00CADDA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		038F26E71F66F18C00CADDA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		038F26EA1F66F18C00CADDA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		038F26EC1F66F18C00CADDA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		038F26EF1F66F18C00CADDA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		038F26F11F66F18C00CADDA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		038F26FB1F66F4A800CADDA9 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		038F27051F683BE600CADDA9 /* SlideInPresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationManager.swift; sourceTree = "<group>"; };
+		038F27071F683F4100CADDA9 /* SlideInPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationController.swift; sourceTree = "<group>"; };
+		038F27091F6842EA00CADDA9 /* SlideInPresentationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +62,13 @@
 			children = (
 				038F26E51F66F18C00CADDA9 /* AppDelegate.swift */,
 				038F26E71F66F18C00CADDA9 /* ViewController.swift */,
-				038F26E91F66F18C00CADDA9 /* Main.storyboard */,
 				038F26EC1F66F18C00CADDA9 /* Assets.xcassets */,
 				038F26EE1F66F18C00CADDA9 /* LaunchScreen.storyboard */,
 				038F26F11F66F18C00CADDA9 /* Info.plist */,
+				038F26FB1F66F4A800CADDA9 /* MenuViewController.swift */,
+				038F27051F683BE600CADDA9 /* SlideInPresentationManager.swift */,
+				038F27071F683F4100CADDA9 /* SlideInPresentationController.swift */,
+				038F27091F6842EA00CADDA9 /* SlideInPresentationAnimator.swift */,
 			);
 			path = InteractiveSlideInMenu;
 			sourceTree = "<group>";
@@ -126,7 +135,6 @@
 			files = (
 				038F26F01F66F18C00CADDA9 /* LaunchScreen.storyboard in Resources */,
 				038F26ED1F66F18C00CADDA9 /* Assets.xcassets in Resources */,
-				038F26EB1F66F18C00CADDA9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,21 +146,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				038F26E81F66F18C00CADDA9 /* ViewController.swift in Sources */,
+				038F270A1F6842EA00CADDA9 /* SlideInPresentationAnimator.swift in Sources */,
+				038F26FC1F66F4A800CADDA9 /* MenuViewController.swift in Sources */,
 				038F26E61F66F18C00CADDA9 /* AppDelegate.swift in Sources */,
+				038F27081F683F4100CADDA9 /* SlideInPresentationController.swift in Sources */,
+				038F27061F683BE600CADDA9 /* SlideInPresentationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		038F26E91F66F18C00CADDA9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				038F26EA1F66F18C00CADDA9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		038F26EE1F66F18C00CADDA9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
