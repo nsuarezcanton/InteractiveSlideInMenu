@@ -18,9 +18,7 @@ class ViewController: UIViewController {
 	}()
 	
 	
-	// MARK: - Properties
-	
-	lazy var slideInTransitionDelegate = SlideInPresentationManager(direction: PresentationDirection.left)
+	// MARK: - Properties	
 	
 	var interactionController: UIPercentDrivenInteractiveTransition?
 	
