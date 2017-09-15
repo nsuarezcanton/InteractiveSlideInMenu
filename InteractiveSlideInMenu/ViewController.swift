@@ -18,7 +18,7 @@ class ViewController: UIViewController {
 	}()
 	
 	
-	// MARK: - Properties	
+	// MARK: - Properties
 	
 	var interactionController: UIPercentDrivenInteractiveTransition?
 	
