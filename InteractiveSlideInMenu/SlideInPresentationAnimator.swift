@@ -58,6 +58,7 @@ extension SlideInPresentationAnimator: UIViewControllerAnimatedTransitioning {
 			case .bottom:
 				dismissedFrame.origin.y = transitionContext.containerView.frame.size.height
 		}
+
 		
 		let initialFrame = isPresentation ? dismissedFrame : presentedFrame
 		let finalFrame = isPresentation ? presentedFrame : dismissedFrame
@@ -68,7 +69,7 @@ extension SlideInPresentationAnimator: UIViewControllerAnimatedTransitioning {
 		UIView.animate(withDuration: animationDuration, animations: { 
 			controller.view.frame = finalFrame
 		}, completion: { (finished: Bool) in
-			transitionContext.completeTransition(finished)
+			transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
 		})
 	}
 }
