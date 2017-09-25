@@ -102,14 +102,18 @@ class SlideInPresentationController: UIPresentationController {
 	}
 
 	override func dismissalTransitionWillBegin() {
-		let dimmingView: UIView = self.dimmingView
-		guard let coordinator = presentedViewController.transitionCoordinator else {
-			dimmingView.alpha = 0.0
+		super.dismissalTransitionWillBegin()
+		
+		guard let transitionCoordinator: UIViewControllerTransitionCoordinator = self.presentingViewController.transitionCoordinator else {
+			assertionFailure("No transition coordinator for animated view controller transition")
+			// set alpha directly
+			self.dimmingView.alpha = self.initialDimmingAlpha
 			return
 		}
-
-		coordinator.animate(alongsideTransition: { _ in
-			dimmingView.alpha = 0.0
+		transitionCoordinator.animate(alongsideTransition: { [weak self](context: UIViewControllerTransitionCoordinatorContext) -> Void in
+			self?.dimmingView.alpha = self?.initialDimmingAlpha ?? 0.0
+			}, completion: { (context: UIViewControllerTransitionCoordinatorContext) -> Void in
+				
 		})
 	}
 	
