@@ -200,6 +200,7 @@ class SlideInPresentationController: UIPresentationController {
 		}
 	}
 	
+	// COMMENT THIS METHOD OUT AND THE INTERACTIVE PRESENTATION FAILS TO DISPLAY PROPERLY
 	override func size(forChildContentContainer container: UIContentContainer, withParentContainerSize parentSize: CGSize) -> CGSize {
 		switch presentationDirection {
 			case .left, .right:
@@ -209,6 +210,7 @@ class SlideInPresentationController: UIPresentationController {
 		}
 	}
 
+	// COMMENT THIS VAR OUT AND THE INTERACTIVE PRESENTATION FAILS TO DISPLAY PROPERLY
 	override var frameOfPresentedViewInContainerView: CGRect {
 		var frame: CGRect = .zero
 		guard let containerView: UIView = self.containerView else {
